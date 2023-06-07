@@ -1,0 +1,35 @@
+---
+title: "analisis_pib_pais"
+author: "Ana Gabriela Alvarez, Sandra Lopez y Susana Meoño"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(datos)
+```
+
+```{r}
+paises <- datos::paises
+glimpse(paises)
+View(paises)
+```
+
+```{r}
+# Obtener la tabla descendente con el PIB per cápita para los países del continente "Americas" en el año 2007.
+
+paises_america_2007 <- paises |>
+  filter(continente == "Américas" & anio == 2007)
+View(paises_america_2007)
+```
+
+```{r}
+# ordenar descendentemente
+
+paises_ordenados <- arrange(paises_america_2007, desc(pib_per_capita))
+View(paises_ordenados)
+```
+
+
