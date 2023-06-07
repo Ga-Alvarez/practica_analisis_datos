@@ -1,0 +1,18 @@
+---
+title: "analisis_pib_pais"
+author: "Ana Gabriela Alvarez, Sandra Lopez y Susana Meoño"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(datos)
+```
+
+```{r}
+paises <- datos::paises
+glimpse(paises)
+```
+
