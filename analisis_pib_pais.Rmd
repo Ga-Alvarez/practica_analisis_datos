@@ -9,6 +9,7 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
 library(datos)
+library(ggplot2)
 ```
 
 ```{r}
@@ -32,4 +33,9 @@ paises_ordenados <- arrange(paises_america_2007, desc(pib_per_capita))
 View(paises_ordenados)
 ```
 
+```{r}
+#Hacer el gráfico de barras que represente el PIB per cápita por país.
+ggplot(data = paises_ordenados) +
+  geom_bar(mapping = aes(y = pais, fill = pib_per_capita))
+```
 
