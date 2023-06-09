@@ -1,0 +1,40 @@
+---
+title: "practica_semanal_sesion3"
+author: "Ana Gabriela Alvarez, Sandra Lopez y Susana Meoño"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(datos)
+library(ggplot2)
+```
+
+```{r}
+paises <- datos::paises
+View(paises)
+```
+
+1.Obtener la tabla con el promedio de la poblacion para cada continente en el año 2007.
+```{r}
+poblacion_continente_mean <- paises |> 
+  group_by(continente) |> 
+  summarise(total_poblacion = mean(poblacion))
+```
+
+
+2. Hacer el gráfico de barras que represente el promedio de la población de cada continente por país.
+
+```{r}
+
+```
+
+3.Agregar título, subtítulo y paleta de colores al gráfico del promedio de la población de cada continente
+por país.
+
+```{r}
+
+```
+
