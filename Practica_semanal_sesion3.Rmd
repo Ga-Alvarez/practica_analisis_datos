@@ -19,16 +19,22 @@ View(paises)
 
 1.Obtener la tabla con el promedio de la poblacion para cada continente en el año 2007.
 ```{r}
-poblacion_continente_mean <- paises |> 
+paises_2007 <- paises |> 
+  filter(anio == 2007)
+
+poblacion_continente_mean <- paises_2007 |> 
   group_by(continente) |> 
   summarise(total_poblacion = mean(poblacion))
+
+View(poblacion_continente_mean)
 ```
 
 
 2. Hacer el gráfico de barras que represente el promedio de la población de cada continente por país.
 
 ```{r}
-
+ggplot(data = poblacion_continente_mean) +
+  geom_bar(mapping = aes(y = continente, fill = total_poblacion))
 ```
 
 3.Agregar título, subtítulo y paleta de colores al gráfico del promedio de la población de cada continente
