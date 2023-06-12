@@ -39,3 +39,4 @@ ggplot(data = paises_ordenados) +
   geom_bar(mapping = aes(y = pais, fill = pib_per_capita))
 ```
 
+
