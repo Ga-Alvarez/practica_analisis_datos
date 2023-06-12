@@ -40,8 +40,8 @@ ggplot(data = paises_ordenados) +
 ```
 
 ```{r}
-mi_paleta <- c("#0070FF","#58508D","#BC5080","#FF6361",
-               "#FFA600", "#090C9B", "#FF9966", "#002147")
+#mi_paleta <- c("#0070FF","#58508D","#BC5080","#FF6361",
+#               "#FFA600", "#090C9B", "#FF9966", "#002147")
 ```
 
 
@@ -51,8 +51,8 @@ ggplot(data = paises_ordenados) +
   geom_bar(mapping = aes(y = pais, fill = pib_per_capita))+
    labs(
     title = "Ingreso per capita de los países de América ",
-    subtitle = "Año 2007")+
-   scale_fill_manual(values = mi_paleta)
+    subtitle = "Año 2007")
+   #scale_fill_manual(values = mi_paleta)
 
 ```
 
